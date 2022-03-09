@@ -6,6 +6,20 @@
 	objectVersion = 55;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		502BFA5027D9406500C50855 /* Lint formatter */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 502BFA5127D9406500C50855 /* Build configuration list for PBXAggregateTarget "Lint formatter" */;
+			buildPhases = (
+				502BFA5427D9406900C50855 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "Lint formatter";
+			productName = "Lint formatter";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		502BFA4E27D938CB00C50855 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BFA4D27D938CB00C50855 /* MainViewController.swift */; };
 		50403CAD27D93548002D9B16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50403CAC27D93548002D9B16 /* AppDelegate.swift */; };
@@ -90,6 +104,7 @@
 				50403CA527D93548002D9B16 /* Sources */,
 				50403CA627D93548002D9B16 /* Frameworks */,
 				50403CA727D93548002D9B16 /* Resources */,
+				502BFA4F27D93E8600C50855 /* Linter */,
 			);
 			buildRules = (
 			);
@@ -110,6 +125,9 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					502BFA5027D9406500C50855 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					50403CA827D93548002D9B16 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -129,6 +147,7 @@
 			projectRoot = "";
 			targets = (
 				50403CA827D93548002D9B16 /* BluetoothNotificator */,
+				502BFA5027D9406500C50855 /* Lint formatter */,
 			);
 		};
 /* End PBXProject section */
@@ -144,6 +163,44 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		502BFA4F27D93E8600C50855 /* Linter */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Linter;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/bin/xcrun --sdk macosx swift run --configuration release --package-path ./Formatter --build-path ./.formatterCache -- swift-format lint --configuration ./Formatter/formatterConfig.json --parallel --recursive ./BluetoothNotificator/\n\n";
+		};
+		502BFA5427D9406900C50855 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/bin/xcrun --sdk macosx swift run --configuration release --package-path ./Formatter --build-path ./.formatterCache -- swift-format format --configuration ./Formatter/formatterConfig.json --parallel --recursive --in-place ./BluetoothNotificator/\n\n/usr/bin/xcrun --sdk macosx swift run --configuration release --package-path ./Formatter --build-path ./.formatterCache -- swift-format lint --configuration ./Formatter/formatterConfig.json --parallel --recursive ./BluetoothNotificator/\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		50403CA527D93548002D9B16 /* Sources */ = {
@@ -170,6 +227,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		502BFA5227D9406500C50855 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95WZQ373WM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		502BFA5327D9406500C50855 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 95WZQ373WM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		50403CBB27D93549002D9B16 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -343,6 +418,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		502BFA5127D9406500C50855 /* Build configuration list for PBXAggregateTarget "Lint formatter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				502BFA5227D9406500C50855 /* Debug */,
+				502BFA5327D9406500C50855 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		50403CA427D93548002D9B16 /* Build configuration list for PBXProject "BluetoothNotificator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
