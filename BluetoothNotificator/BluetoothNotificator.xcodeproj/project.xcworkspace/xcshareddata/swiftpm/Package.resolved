@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MQ",
+        "repositoryURL": "https://github.com/miquido/MQ-iOS.git",
+        "state": {
+          "branch": null,
+          "revision": "39548729b07fd67cace3b37ddb3ac28842989efa",
+          "version": "0.3.0"
+        }
+      },
+      {
+        "package": "MQDo",
+        "repositoryURL": "https://github.com/miquido/MQDo",
+        "state": {
+          "branch": null,
+          "revision": "d10b90b77674adda3950177e2de2d933a97c3169",
+          "version": "0.1.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

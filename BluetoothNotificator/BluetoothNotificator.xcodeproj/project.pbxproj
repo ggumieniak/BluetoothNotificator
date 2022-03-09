@@ -22,6 +22,7 @@
 
 /* Begin PBXBuildFile section */
 		502BFA4E27D938CB00C50855 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502BFA4D27D938CB00C50855 /* MainViewController.swift */; };
+		502BFA5727D942F700C50855 /* MQDo in Frameworks */ = {isa = PBXBuildFile; productRef = 502BFA5627D942F700C50855 /* MQDo */; };
 		50403CAD27D93548002D9B16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50403CAC27D93548002D9B16 /* AppDelegate.swift */; };
 		50403CAF27D93548002D9B16 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50403CAE27D93548002D9B16 /* SceneDelegate.swift */; };
 		50403CB627D93549002D9B16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50403CB527D93549002D9B16 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502BFA5727D942F700C50855 /* MQDo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +113,9 @@
 			dependencies = (
 			);
 			name = BluetoothNotificator;
+			packageProductDependencies = (
+				502BFA5627D942F700C50855 /* MQDo */,
+			);
 			productName = BluetoothNotificator;
 			productReference = 50403CA927D93548002D9B16 /* BluetoothNotificator.app */;
 			productType = "com.apple.product-type.application";
@@ -142,6 +147,9 @@
 				Base,
 			);
 			mainGroup = 50403CA027D93548002D9B16;
+			packageReferences = (
+				502BFA5527D942F700C50855 /* XCRemoteSwiftPackageReference "MQDo" */,
+			);
 			productRefGroup = 50403CAA27D93548002D9B16 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -446,6 +454,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		502BFA5527D942F700C50855 /* XCRemoteSwiftPackageReference "MQDo" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/miquido/MQDo";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		502BFA5627D942F700C50855 /* MQDo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 502BFA5527D942F700C50855 /* XCRemoteSwiftPackageReference "MQDo" */;
+			productName = MQDo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 50403CA127D93548002D9B16 /* Project object */;
 }
